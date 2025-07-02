@@ -5,6 +5,8 @@ import 'leaflet/dist/leaflet.css';
 import { GiSpermWhale } from "react-icons/gi";
 import { DivIcon } from 'leaflet';
 import ReactDOMServer from 'react-dom/server';
+import { SightingData } from '../SightingData';
+import SightingPopup from './SightingPopup';
 
 const customIcon = new DivIcon({
   className: '', // avoid Leaflet default styles
@@ -15,11 +17,6 @@ const customIcon = new DivIcon({
   // iconAnchor: [12, 24], // center bottom
 });
 
-export type SightingData ={
-  id: number,
-  latitude: number,
-  longitude: number,
-}
 
 interface Props {
   sightings: SightingData[],
@@ -39,11 +36,9 @@ const Map = (props: Props) => {
       />
 
       {props.sightings &&
-        props.sightings.map((sighting)=>{
-          return <Marker key={sighting.id} icon={customIcon} position={[sighting.latitude, sighting.longitude]}>
-          <Popup>
-            A pretty CSS3 popup. <br /> Easily customizable.
-          </Popup>
+        props.sightings.map((sightingData)=>{
+          return <Marker key={sightingData.id} icon={customIcon} position={[sightingData.latitude, sightingData.longitude]}>
+          <SightingPopup data={sightingData}/>
         </Marker>
         })
       }

@@ -2,8 +2,8 @@
 import axios from 'axios';
 import { useEffect, useState } from 'react';
 import dynamic from 'next/dynamic';
-import { SightingData } from './_components/Map';
 import DmsCoordinates from 'dms-conversion';
+import { SightingData } from './SightingData';
 
 const Map = dynamic(() => import('./_components/Map'), {
   ssr: false,
@@ -47,6 +47,21 @@ export default function Home() {
             longitude,
             latitude,
             id: data.id,
+            individualCount: data.individualCount,
+            species: data.species,
+            vernacularName: data.vernacularName,
+
+            basisOfRecord: data.basisOfRecord,
+            coordinateUncertaintyInMeters: data.coordinateUncertaintyInMeters,
+            dateIdentified: data.dateIdentified,
+            year: data.year,
+            day: data.day,
+            month: data.month,
+            locality: data.locality,
+            waterBody: data.waterBody,
+            identificationRemarks: data.identificationRemarks,
+            shoredistance: data.shoredistance,
+            type: data.type,
           }
 
           return sighting;
