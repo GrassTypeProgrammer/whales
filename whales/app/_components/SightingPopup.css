@@ -8,3 +8,7 @@
     box-shadow: none !important;
     padding: 0 !important;
 }
+
+.leaflet-popup-content p{
+    margin: 0;
+}
