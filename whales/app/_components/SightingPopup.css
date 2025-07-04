@@ -1,5 +1,5 @@
 .leaflet-popup-tip {
-    display: none !important;
+    background-color: rgb(14 116 144);
 }
 
 .leaflet-popup-content-wrapper {
@@ -9,6 +9,10 @@
     padding: 0 !important;
 }
 
-.leaflet-popup-content p{
+.leaflet-popup-content p {
+    margin: 0;
+}
+
+.leaflet-popup-content {
     margin: 0;
 }
