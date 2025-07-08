@@ -15,6 +15,7 @@ const SightingPopup = (props: Props) => {
   kmFromShore = Math.round(kmFromShore * 100) / 100;
 
   return (
+    // TODO Replace this with more semantic html
     <Popup  className='w-96' closeButton={false} >
       <div className='h-96 w-96 flex flex-col justify-center rounded-xl bg-orange-100'>
         {/* Header */}

@@ -76,11 +76,8 @@ export default function Home() {
   }, [])
 
   return (
-    <div>
-
-      <div>Whales</div>
-
-      <div id="map" className='h-44'>
+    <div className='min-h-screen'>
+      <div id="map" className='flex flex-row justify-center'>
         <Map sightings={sightings} />
       </div>
     </div>

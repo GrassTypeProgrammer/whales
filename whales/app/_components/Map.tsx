@@ -25,10 +25,10 @@ interface Props {
 const Map = (props: Props) => {
   return (
     <MapContainer
-      center={[51.505, -0.09]}
-      zoom={1}
+      center={[15.505, -0.09]}
+      zoom={2}
       scrollWheelZoom={false}
-      style={{ height: '500px', width: '100%' }}
+      style={{ height: '40rem', width: '70rem' }}
     >
       <TileLayer
         attribution='&copy; <a href="https://www.openstreetmap.org/copyright">OpenStreetMap</a> contributors'
